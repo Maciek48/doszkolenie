@@ -31,12 +31,11 @@ public class Main {
             System.out.println("Result: " + result);
             lastResult = result;
 
-            do {
+            while (decision != 'n' && decision != 'y') {
                 System.out.print("Press n to quit or y to enter new calculation: ");
                 decision = scanner.next().charAt(0);
-            } while (decision != 'n' && decision != 'y');
+            }
         }
-
         System.out.println(lastResult > 0
                 ? "Last result grater then zero"
                 : "Last result is smaller or equals zero");
