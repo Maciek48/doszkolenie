@@ -2,9 +2,9 @@ import java.time.LocalDate;
 
 public class Car extends Vehicle implements Driveable {
 
-    private int doors;
+    private final int doors;
 
-    public Car(String brand, String model, LocalDate year, fuelType fuelType, int tankCapacity, double fuelLevel, int doors) {
+    public Car(String brand, String model, LocalDate year, FuelType fuelType, int tankCapacity, double fuelLevel, int doors) {
         super(brand, model, year, fuelType, tankCapacity, fuelLevel);
         if (doors <= 0) {
             throw new IllegalArgumentException("Car must have at least 1 door");

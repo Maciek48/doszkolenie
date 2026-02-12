@@ -2,7 +2,7 @@ import java.time.LocalDate;
 
 public class Motorcycle extends Vehicle implements Driveable {
 
-    public Motorcycle(String brand, String model, LocalDate year, fuelType fuelType, int tankCapacity, double fuelLevel) {
+    public Motorcycle(String brand, String model, LocalDate year, FuelType fuelType, int tankCapacity, double fuelLevel) {
         super(brand, model, year, fuelType, tankCapacity, fuelLevel);
     }
 

@@ -1,4 +1,6 @@
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
@@ -7,7 +9,7 @@ public class Main {
                 "Yamaha",
                 "R6",
                 LocalDate.of(2018, 1, 1),
-                fuelType.PETROL,
+                FuelType.PETROL,
                 20,
                 15.0
         );
@@ -16,7 +18,7 @@ public class Main {
                 "BMW",
                 "E46",
                 LocalDate.of(2005, 1, 1),
-                fuelType.DIESEL,
+                FuelType.DIESEL,
                 60,
                 40.0,
                 4
@@ -35,5 +37,11 @@ public class Main {
         car.refuel(5);
         car.refuel(100);
         car.displayInfo();
+
+        System.out.println("\n=== TEST POLIMPRPHISM ===");
+        List<Vehicle> list = new ArrayList<>(List.of(moto, car));
+        for (Vehicle v : list) {
+            v.displayInfo();
+        }
     }
 }

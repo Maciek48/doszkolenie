@@ -1,13 +1,13 @@
 import java.time.LocalDate;
 
 public abstract class Vehicle {
-    private String brand, model;
-    private LocalDate year;
-    private fuelType fuelType;
-    private int tankCapacity;
+    private final String brand, model;
+    private final LocalDate year;
+    private final FuelType fuelType;
+    private final int tankCapacity;
     private double fuelLevel;
 
-    public Vehicle(String brand, String model, LocalDate year, fuelType fuelType, int tankCapacity, double fuelLevel){
+    public Vehicle(String brand, String model, LocalDate year, FuelType fuelType, int tankCapacity, double fuelLevel){
         this.brand = brand;
         this.model = model;
         this.year = year;
@@ -31,7 +31,7 @@ public abstract class Vehicle {
         return year;
     }
 
-    public fuelType getFuelType() {
+    public FuelType getFuelType() {
         return fuelType;
     }
 
