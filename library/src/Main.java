@@ -1,6 +1,6 @@
 import exception.LibraryException;
 import model.Book;
-import model.Library;
+import service.LibraryService;
 import model.Movie;
 
 import java.util.HashSet;
@@ -19,7 +19,7 @@ public class Main {
         movies.add(new Movie("Titanic", "James Cameron", 195));
         movies.add(new Movie("Matrix", "Wachowscy", 136));
 
-        Library library = new Library(books, movies);
+        LibraryService library = new LibraryService(books, movies);
 
         Scanner scanner = new Scanner(System.in);
         boolean running = true;

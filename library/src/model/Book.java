@@ -1,5 +1,7 @@
 package model;
 
+import java.util.Objects;
+
 public class Book {
     private static int counterBook;
     private final String title, author;
@@ -32,5 +34,17 @@ public class Book {
 
     public void setAvailable(boolean available) {
         isAvailable = available;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Book book = (Book) o;
+        return numberOfPages == book.numberOfPages && isAvailable == book.isAvailable && Objects.equals(title, book.title) && Objects.equals(author, book.author);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, numberOfPages, isAvailable);
     }
 }

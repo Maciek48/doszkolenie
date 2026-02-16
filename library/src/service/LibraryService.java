@@ -1,17 +1,20 @@
-package model;
+package service;
 
 import exception.BookAlreadyBorrowedException;
 import exception.BookNotFoundException;
 import exception.MovieAlreadyBorrowedException;
 import exception.MovieNotFoundException;
+import model.Book;
+import model.Movie;
 
 import java.util.Set;
+//TODO: Przerobić na abstrakcje tzn Library -> Item -> Books, Movie
 
-public class Library {
+public class LibraryService {
     private Set<Book> books;
     private Set<Movie> movies;
 
-    public Library(Set<Book> books, Set<Movie> movies) {
+    public LibraryService(Set<Book> books, Set<Movie> movies) {
         this.books = books;
         this.movies = movies;
     }
